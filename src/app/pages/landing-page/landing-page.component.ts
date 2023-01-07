@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetNewsService } from 'src/app/services/get-news.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getnews : GetNewsService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    console.log(await this.getnews.getNews())
   }
 
 }
