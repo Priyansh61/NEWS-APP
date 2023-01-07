@@ -21,8 +21,6 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     NbThemeModule.forRoot({ name: 'dark' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    HttpClientModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
